@@ -1,0 +1,97 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-single-page-romantic-valentine-prompt-ui-that-asks-will-you-be-my-valentine-and-shows-exactly-two-options-yes-and-no",
+      "featureTitle": "Create a single-page romantic Valentine prompt UI that asks: \"Will you be my Valentine?\" and shows exactly two options: \"Yes\" and \"No\".",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/main.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-evasive-no-button-interaction-when-the-user-tries-to-hover-over-or-otherwise-target-the-no-button-pointer-enter-mouse-move-touch-attempt-the-button-should-move-to-a-different-position-within-the-visible-page-area-so-it-cannot-be-clicked",
+      "featureTitle": "Implement an evasive \"No\" button interaction: when the user tries to hover over or otherwise target the \"No\" button (pointer enter / mouse move / touch attempt), the button should move to a different position within the visible page area so it cannot be clicked.",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-when-the-user-clicks-yes-replace-the-prompt-buttons-with-a-celebratory-view-that-displays-a-meme-image-containing-the-text-good-choice",
+      "featureTitle": "When the user clicks \"Yes\", replace the prompt/buttons with a celebratory view that displays a meme image containing the text: \"Good choice\".",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-romantic-visual-theme-using-a-pink-and-white-color-scheme-with-a-cohesive-playful-style-appropriate-for-a-valentine-surprise-page",
+      "featureTitle": "Apply a consistent romantic visual theme using a pink and white color scheme, with a cohesive, playful style appropriate for a Valentine surprise page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-the-required-generated-image-s-as-static-assets-under-frontend-public-assets-generated-and-reference-them-directly-from-the-frontend-do-not-fetch-images-from-the-backend",
+      "featureTitle": "Add the required generated image(s) as static assets under frontend/public/assets/generated and reference them directly from the frontend (do not fetch images from the backend).",
+      "files": [
+        "frontend/src/App.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

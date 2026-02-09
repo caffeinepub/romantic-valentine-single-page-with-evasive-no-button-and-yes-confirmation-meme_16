@@ -1,0 +1,5 @@
+{
+  "frontend/src/App.tsx": "Single-page Valentine's Day interactive component with evasive \"No\" button that repositions on hover/touch to avoid clicks, \"Yes\" button that shows success state with meme image, and romantic pink/white themed UI with floating heart animations.",
+  "frontend/src/index.css": "Global styles with romantic pink/white OKLCH color system (hue 350), custom utility classes for romantic theme colors, and floating heart animations for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration with extended color system using OKLCH values, custom border radius, shadows, and animation keyframes for accordion components."
+}

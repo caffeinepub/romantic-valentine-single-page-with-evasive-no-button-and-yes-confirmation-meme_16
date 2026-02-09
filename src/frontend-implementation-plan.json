@@ -1,0 +1,100 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Valentine Yes/No single-page with evasive No button and Good choice meme",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a single-page Valentine prompt with one question and exactly two choices (Yes/No).",
+      "acceptanceCriteria": [
+        "On load, the page shows one clear Valentine question and two buttons labeled \"Yes\" and \"No\".",
+        "No other primary user flows/actions are presented besides answering the question."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the single-page UI that renders the prompt text \"Will you be my Valentine?\" and exactly two buttons labeled \"Yes\" and \"No\", with local React state to track whether the user has answered."
+        },
+        {
+          "path": "frontend/src/main.tsx",
+          "operation": "modify",
+          "description": "Ensure the app renders the new single-page App component and remains a single-view experience (no additional routes/pages introduced)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Make the \"No\" button evasive on hover/mouse move and on touch/pointer attempts, staying within viewport and avoiding overlap.",
+      "acceptanceCriteria": [
+        "On desktop, moving the cursor toward the \"No\" button causes it to reposition before a click can occur.",
+        "On iPad/touch devices, attempting to tap/press the \"No\" button triggers the repositioning (i.e., the interaction does not rely solely on hover).",
+        "The \"No\" button always stays fully visible within the viewport and does not overlap the \"Yes\" button or the main question text."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Implement evasive positioning logic for the \"No\" button using a bounded container and runtime measurements (refs) to reposition it on pointer enter/move/down and touch start. Ensure generated positions keep the button fully within the visible area and enforce exclusion zones so it does not overlap the \"Yes\" button or the question text."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "On \"Yes\" click, switch to a celebratory success view showing the \"Good choice\" meme image and hide the \"No\" option.",
+      "acceptanceCriteria": [
+        "Clicking \"Yes\" transitions to a success state (same page) that prominently shows the generated meme image.",
+        "The meme image visibly includes the exact text \"Good choice\".",
+        "After entering the success state, the \"No\" button is no longer shown."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a success state triggered by clicking \"Yes\" that replaces the prompt/buttons with a celebratory view and renders the static meme image; ensure the \"No\" button is not rendered in the success state."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Apply a cohesive romantic pink/white theme with playful styling and clean iPad-friendly layout.",
+      "acceptanceCriteria": [
+        "The page uses pink/white as the dominant palette across background, buttons, and typography.",
+        "Typography, spacing, and component styling feel intentionally romantic/cohesive (not default browser styling).",
+        "Layout renders cleanly on iPad Chrome in both portrait and landscape orientations (no clipped primary content)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add Tailwind base setup and global romantic theme styling (pink/white palette, background, typography defaults) using existing global styling entry points; avoid default browser look while keeping responsive layout safe for iPad portrait/landscape."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Apply Tailwind classes for a romantic layout (centered content, responsive spacing/typography, pink/white button styles) ensuring primary content is not clipped on iPad orientations."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Include the required generated meme image as a static asset and reference it directly from the frontend.",
+      "acceptanceCriteria": [
+        "The app loads the meme image from a static path under /assets/generated/ without backend calls.",
+        "The image renders correctly in the \"Yes\" success state in local/dev builds."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/valentine-good-choice-meme.dim_1024x1024.png",
+          "operation": "create",
+          "description": "Add the generated static meme asset at frontend/public/assets/generated/valentine-good-choice-meme.dim_1024x1024.png so it can be referenced directly by the frontend without backend calls."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Reference and render the static image from frontend/public/assets/generated/valentine-good-choice-meme.dim_1024x1024.png in the success state (use a direct static asset path; do not fetch from backend)."
+        }
+      ]
+    }
+  ]
+}

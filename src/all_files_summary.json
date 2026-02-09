@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor placeholder with no functionality.",
+  "feature_evidence.json": "Feature evidence report mapping Valentine UI features to involved files and components.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing main frontend files such as App.tsx, index.css, and Tailwind config.",
+  "frontend/index.css": "Base Tailwind setup defining color variables, theming, and global background/foreground styles.",
+  "frontend/index.html": "HTML entry point loading the React app via main.tsx.",
+  "frontend/src/App.tsx": "Main Valentine UI component with evasive No button logic, Yes confirmation state, and romantic styling.",
+  "frontend/src/hooks/useActor.ts": "React hook creating and refreshing an authenticated or anonymous backend actor via react-query.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context and hooks managing Internet Identity auth flow, stored identity, and login lifecycle.",
+  "frontend/src/index.css": "Romantic-themed Tailwind base styles and utilities with OKLCH pink palette and dark mode variants.",
+  "frontend/src/main.tsx": "React entry point initializing QueryClient, InternetIdentityProvider, and rendering App.",
+  "frontend/tailwind.config.js": "Configures Tailwind with dark mode, content paths, extended color/theme settings, custom animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "Defines project metadata and requirements for a Valentine-themed interactive web page featuring a Yes/No prompt, evasive No button, and a celebratory meme on Yes."
+}
